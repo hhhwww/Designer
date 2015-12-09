@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Designer</string>
+
+    <string name="internet_failed">请检查网络连接</string>
+</resources>
