@@ -2,4 +2,7 @@
     <string name="app_name">Designer</string>
 
     <string name="internet_failed">请检查网络连接</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

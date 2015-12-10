@@ -5,7 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 
-import com.wecanstudio.xdsjs.save.MyApplication;
+import com.wecanstudio.designer.MyApplication;
+
 
 /**
  * Created by rocko on 15-11-3.

@@ -1,19 +1,14 @@
 package com.wecanstudio.designer.view.fragment;
 
-import android.content.Context;
 import android.content.Intent;
 import android.databinding.ViewDataBinding;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-
 import com.wecanstudio.designer.view.widget.SingleToast;
 import com.wecanstudio.designer.viewModel.ViewModel;
-
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 
 /**
@@ -120,49 +115,4 @@ public abstract class BaseFragment<VM extends ViewModel, B extends ViewDataBindi
 
 		mSingleToast.showBottomToast(messageId);
 	}
-
-	SweetAlertDialog pDialog;
-
-	/**
-	 * 显示loding对话框
-	 *
-	 * @param context
-	 */
-	protected void showLodingDialog(Context context) {
-		pDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
-		pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-		pDialog.setTitleText("Loading");
-		pDialog.setCancelable(false);
-		pDialog.show();
-	}
-
-	/**
-	 * 展示信息的对话框
-	 *
-	 * @param context
-	 * @param content
-	 * @param onSweetClickListener
-	 */
-	protected void showDialog(Context context, String content, SweetAlertDialog.OnSweetClickListener onSweetClickListener) {
-		pDialog = new SweetAlertDialog(context, SweetAlertDialog.NORMAL_TYPE);
-		pDialog.setCanceledOnTouchOutside(true);
-		pDialog.setTitleText(content);
-		pDialog.setConfirmClickListener(onSweetClickListener);
-		pDialog.setCancelText("cancle");
-		pDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-			@Override
-			public void onClick(SweetAlertDialog sweetAlertDialog) {
-				dismissDialog();
-			}
-		});
-		pDialog.show();
-	}
-
-	protected void dismissDialog() {
-		if (pDialog != null) {
-			pDialog.dismiss();
-			pDialog = null;
-		}
-	}
-
 }

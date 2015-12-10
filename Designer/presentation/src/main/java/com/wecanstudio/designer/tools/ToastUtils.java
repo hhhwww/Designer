@@ -2,7 +2,8 @@ package com.wecanstudio.designer.tools;
 
 import android.widget.Toast;
 
-import com.wecanstudio.xdsjs.save.MyApplication;
+import com.wecanstudio.designer.MyApplication;
+
 
 /**
  * Created by xdsjs on 2015/11/27.
