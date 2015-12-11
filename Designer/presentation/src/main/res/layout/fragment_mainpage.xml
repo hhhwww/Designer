@@ -8,28 +8,17 @@
             type="com.wecanstudio.designer.viewModel.MainPageFrViewModel" />
     </data>
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <com.wecanstudio.designer.view.widget.RefreshLayout
         android:id="@+id/refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/id_listview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+        </ListView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="555" />
-
-            <ListView
-                android:id="@+id/id_listview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-            </ListView>
-
-        </LinearLayout>
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </com.wecanstudio.designer.view.widget.RefreshLayout>
 
 </layout>

@@ -64,9 +64,8 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
                 hideFragments(transaction);
                 if (mainPageFragment == null) {
                     mainPageFragment = new MainPageFragment();
-                    transaction.add(R.id.content, mainPageFragment);
+                    transaction.add(R.id.content, mainPageFragment, "mainPage");
                     currentFragment = mainPageFragment;
-                    break;
                 }
                 transaction.show(mainPageFragment);
                 currentFragment = mainPageFragment;
@@ -75,7 +74,7 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
                 hideFragments(transaction);
                 if (followFragment == null) {
                     followFragment = new FollowFragment();
-                    transaction.add(R.id.content, followFragment);
+                    transaction.add(R.id.content, followFragment, "follow");
                     currentFragment = followFragment;
                 }
                 transaction.show(followFragment);
@@ -85,7 +84,7 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
                 hideFragments(transaction);
                 if (newsFragment == null) {
                     newsFragment = new NewsFragment();
-                    transaction.add(R.id.content, newsFragment);
+                    transaction.add(R.id.content, newsFragment, "news");
                     currentFragment = newsFragment;
                 }
                 transaction.show(newsFragment);
@@ -125,10 +124,8 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
             hideFragments(transaction);
             if (mainPageFragment == null) {
                 mainPageFragment = new MainPageFragment();
-                transaction.add(R.id.content, mainPageFragment).commit();
+                transaction.add(R.id.content, mainPageFragment, "mainPage").commit();
                 currentFragment = mainPageFragment;
-                getBinding().navView.setCheckedItem(R.id.nav_mainpage);
-                return;
             }
             transaction.show(mainPageFragment).commit();
             currentFragment = mainPageFragment;
